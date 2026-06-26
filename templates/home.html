@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khusus Untuk Kamu ❤️</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding-top: 120px;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        h1 { color: #ff4d6d; font-size: 2.5rem; margin-bottom: 10px; }
+        p { color: #4a4a4a; font-size: 1.2rem; }
+        .btn-container {
+            margin-top: 40px;
+            position: relative;
+            height: 80px;
+        }
+        button {
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            position: absolute;
+            transition: all 0.1s ease;
+        }
+        #btn-mau {
+            background-color: #ff4d6d;
+            color: white;
+            left: 20%;
+        }
+        #btn-mau:hover {
+            background-color: #ff758f;
+            transform: scale(1.05);
+        }
+        #btn-ga {
+            background-color: #b0b0b0;
+            color: white;
+            right: 20%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hai Kamu... ❤️</h1>
+        <p>Aku mau nanya sesuatu hal jujur dari hati yang paling dalam. Kamu mau gak jadi pacar aku?</p>
+        
+        <div class="btn-container">
+            <button id="btn-mau" onclick="alert('Yay! Makasih ya tapi aku gak mau 😜!')">MAU! 💖</button>
+            
+            <button id="btn-ga" onmouseover="pindahTombol()" onclick="pindahTombol()">Enggak 😜</button>
+        </div>
+    </div>
+
+    <script>
+        function pindahTombol() {
+            var tombolGa = document.getElementById('btn-ga');
+            
+            // Logika acak koordinat layar agar tombol melompat menjauh
+            var x = Math.random() * (window.innerWidth - tombolGa.offsetWidth - 50);
+            var y = Math.random() * (window.innerHeight - tombolGa.offsetHeight - 50);
+            
+            tombolGa.style.position = 'fixed';
+            tombolGa.style.left = x + 'px';
+            tombolGa.style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>
