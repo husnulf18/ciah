@@ -1,11 +1,13 @@
 from flask import Flask, render_template
 
-app = Flask(__name__)
+loveee = Flask(__name__)
 
-@app.route('/')
+@loveee.route('/')
 def home():
     return render_template('home.html')
 
+# Baris ini sangat penting agar Vercel tahu penamaan file Anda
+app = loveee
+
 if __name__ == "__main__":
-    # Menambahkan port=4444 di dalam app.run
-    app.run(port=4444, debug=True)
+    loveee.run(port=4444, debug=True)
