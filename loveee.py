@@ -10,4 +10,4 @@ def home():
 app = loveee
 
 if __name__ == "__main__":
-    loveee.run(port=4444, debug=True)
+    loveee.run(port=2026, debug=True)
